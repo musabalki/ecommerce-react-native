@@ -2,8 +2,10 @@ import { View, Text, SafeAreaView, StyleSheet, FlatList, Image, TouchableOpacity
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SearchScreen from "./SearchScreen";
 import SettingScreen from "./SettingScreen";
+import CartScreen from "./CartScreen";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Material from 'react-native-vector-icons/MaterialCommunityIcons';
+import Feather from 'react-native-vector-icons/Feather';
 
 const Tab = createBottomTabNavigator()
 
@@ -48,7 +50,7 @@ const Home = () => {
         <SafeAreaView style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View>
-                    
+
                     <Text style={styles.title}>Exclusive Offer</Text>
 
                     <FlatList showsHorizontalScrollIndicator={false} horizontal={true}
@@ -56,7 +58,7 @@ const Home = () => {
                         renderItem={renderItem}
                         keyExtractor={(item) => item.id}
                     />
-                    <Image source={require("../img/banner.png")} style={{width:"100%",borderRadius:14, marginTop:20}} />
+                    <Image source={require("../img/banner.png")} style={{ width: "100%", borderRadius: 14, marginTop: 20 }} />
                     <Text style={styles.title}>Best Selling</Text>
                     <FlatList horizontal={true} showsHorizontalScrollIndicator={false}
 
@@ -64,7 +66,7 @@ const Home = () => {
                         renderItem={renderItem}
                         keyExtractor={(item) => item.id}
                     />
-                    <Image source={require("../img/banner.png")} style={{width:"100%",borderRadius:14, marginTop:20}} />
+                    <Image source={require("../img/banner.png")} style={{ width: "100%", borderRadius: 14, marginTop: 20 }} />
                     <Text style={styles.title}>New Products</Text>
                     <FlatList horizontal={true} showsHorizontalScrollIndicator={false}
 
@@ -123,16 +125,20 @@ const screenOptions = (route, color) => {
             iconName = 'text-search';
             return <Material name="text-search" color="black" size={27} />;
             break;
+        case 'CartScreen':
+            iconName = '';
+            return <Feather name="heart" color="black" size={27} />;
+         
         case 'SettingScreen':
             iconName = 'cog';
             return <Icon name={iconName} color="black" size={20} />;
-            break;
+        
         default:
-            
+
             break;
     }
-    
-    
+
+
 };
 
 const HomeScreen = ({ navigation }) => {
@@ -146,6 +152,7 @@ const HomeScreen = ({ navigation }) => {
         >
             <Tab.Screen name="HomeScreen" component={Home} options={{ headerShown: false }} />
             <Tab.Screen name="SearchScreen" component={SearchScreen} options={{ headerShown: false }} />
+            <Tab.Screen name="CartScreen" component={CartScreen} options={{ headerShown: false }} />
             <Tab.Screen name="SettingScreen" component={SettingScreen} options={{ headerShown: false }} />
         </Tab.Navigator>
 
