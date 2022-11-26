@@ -120,21 +120,16 @@ const screenOptions = (route, color) => {
         case 'HomeScreen':
             iconName = 'home';
             return <Icon name={iconName} color="black" size={20} />;
-            break;
         case 'SearchScreen':
             iconName = 'text-search';
             return <Material name="text-search" color="black" size={27} />;
-            break;
         case 'CartScreen':
             iconName = '';
             return <Feather name="heart" color="black" size={27} />;
-         
         case 'SettingScreen':
             iconName = 'cog';
             return <Icon name={iconName} color="black" size={20} />;
-        
         default:
-
             break;
     }
 

@@ -7,13 +7,15 @@
 
 ## Page Screens
 
-### First
-<img src="app_screens/first.png" width="300" > 
+## Splash Screen
+<img src="app_screens/splash_screen.png" width="300" > 
 
-### Sign In - Sign Up
-<img src="app_screens/login.png" width="300" > <img src="app_screens/register.png" width="300" >
+## Sign In - Sign Up
+<img src="app_screens/sign_in.png" width="300" > <img src="app_screens/sign_up.png" width="300" >
 
-### Home - Search
+## Home - Search
 <img src="app_screens/home.png" width="300" > <img src="app_screens/search.png" width="300" >
 
+## Cart - Setting
+<img src="app_screens/cart.png" width="300" > <img src="app_screens/setting.png" width="300" >
 
